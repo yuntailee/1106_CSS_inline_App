@@ -1,4 +1,4 @@
-// 預設顯示第一個
+// 預設顯示是請選擇
 document
   .querySelector('.manufacturer-list[data-content="1"]')
   .classList.add("active");
@@ -11,7 +11,7 @@ document.querySelectorAll(".manufacturer-tab").forEach((tab) => {
   tab.addEventListener("click", function () {
     const tabId = this.getAttribute("data-tab");
 
-    // 移除所有 active
+    // 移除 active
     document
       .querySelectorAll(".manufacturer-tab")
       .forEach((t) => t.classList.remove("active"));
@@ -19,7 +19,7 @@ document.querySelectorAll(".manufacturer-tab").forEach((tab) => {
       .querySelectorAll(".manufacturer-list")
       .forEach((list) => list.classList.remove("active"));
 
-    // 添加當前 active
+    // 添加按鈕的 active
     this.classList.add("active");
     document
       .querySelector(`.manufacturer-list[data-content="${tabId}"]`)
